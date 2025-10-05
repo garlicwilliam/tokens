@@ -11,8 +11,8 @@ import {E18} from "../../utils/big-number";
 const hold = 'https://gateway.thegraph.com/api/subgraphs/id/8BGeis9bYwM7SGhPq5qnNFUKLAcgAFBstrvpsdSoRdk3';
 const pancakeX1 = 'https://gateway.thegraph.com/api/subgraphs/id/7ZnuQ1gfBL93qkEH1PHEo3tKFtuL4D5jtERHZ7RnuWn9';
 const pancakeUSDTX1 = 'https://api.studio.thegraph.com/query/70107/sc-usd-1-pancake-usdt-x-1/version/latest';
-const startDay = '2025-09-15T00:00:00Z'; // start time, adjust as needed
-const endDay = '2025-09-21T00:00:00Z'; // include this day
+const startDay = '2025-09-21T00:00:00Z'; // start time, adjust as needed
+const endDay = '2025-09-30T00:00:00Z'; // include this day
 
 const fix = 18;
 
@@ -621,7 +621,7 @@ function distributeTokens(amounts: bigint) {
 }
 
 
-mergeFile();
+distributeTokens(50000n);
 
 console.log(new Date(startDay).getTime() / 1000);
 console.log(new Date(endDay).getTime() / 1000 + 86400);
